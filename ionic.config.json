@@ -1,0 +1,8 @@
+{
+  "name": "portfilio",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "89c5aa16"
+}

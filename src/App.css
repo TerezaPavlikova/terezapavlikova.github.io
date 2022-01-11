@@ -1,0 +1,32 @@
+.sticky-header{
+    
+    width:80%; 
+    margin:auto;
+   
+}
+@media (max-width:800px) {
+    .sticky-header{
+        width: 90%; 
+    }   
+}
+@media (max-width:400px) {
+    .sticky-header{
+        width: 100%; 
+    }   
+}
+.sticky-toolbar{
+    --background: #212121;
+    --color:#E9E9E9;
+}
+.navburger{
+    margin-right: 50px;
+    font-size:xx-large;
+}
+.navburgerIcon{
+    font-size: xx-large; 
+
+}
+.page-content{
+    margin-top: 60px;
+    overflow-y: auto;
+}
