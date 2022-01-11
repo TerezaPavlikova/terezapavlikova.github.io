@@ -4,7 +4,7 @@ import './Kontakt.css';
 
 const Kontakt: React.FC = () => {
   return (
-    <ExploreContainer name="Kontakt page" />
+    <ExploreContainer name="Kontakt stranka" />
   );
 };
 
