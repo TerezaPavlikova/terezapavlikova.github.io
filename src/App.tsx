@@ -24,6 +24,7 @@ import NaStiahnutie from './pages/NaStiahnutie';
 import Kontakt from './pages/Kontakt';
 import { Menu } from './components/base/Menu'
 import { PageHeader } from './components/base/PageHeader'
+import { PageBottomNav } from './components/base/PageBottomNav'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,7 +51,8 @@ const App: React.FC = () => (
     <IonPage>
       <IonContent fullscreen>
         <IonReactRouter>
-          <PageHeader />
+          <PageHeader /> 
+          <PageBottomNav/>
           <Menu />
           <IonPage className="page-content">
             <IonContent >
@@ -63,7 +65,7 @@ const App: React.FC = () => (
               </Switch>
             </IonContent >
           </IonPage>
-
+          
         </IonReactRouter>
       </IonContent>
     </IonPage>

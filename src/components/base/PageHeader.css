@@ -1,0 +1,29 @@
+.page-header-content{
+    width: 90%; 
+    margin:0 auto; 
+   --background: transparent;
+   --color: #E9E9E9;
+}
+.sticky-toolbar{
+    --background: var(--ion-color-secondary);
+    --color:#E9E9E9;
+}
+.navburgerIcon{
+    font-size: xx-large; 
+}
+.page-header-link-button {
+    color:#E9E9E9;
+}
+.navburgerIcon{
+    color: #E9E9E9;
+    margin-right: 5px;
+ }
+ .page-header-link-lbl{
+    font-size: large;
+ }
+ @media (max-width:768px) {
+     .page-header-btn{
+         display: none;
+     }
+     
+ }

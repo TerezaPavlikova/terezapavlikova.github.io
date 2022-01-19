@@ -1,13 +1,18 @@
 import React from 'react';
-import { IonContent, IonButton, IonHeader, IonItem, IonList, IonMenu, IonMenuToggle, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonButton, IonHeader, IonItem, IonList, IonMenu, IonMenuToggle, IonTitle, IonToolbar, IonIcon } from '@ionic/react';
 import './Menu.css'
+import { arrowBackOutline } from 'ionicons/icons';
 export const Menu: React.FC = () => {
     return (
 
-        <IonMenu className="menu" side="end" menuId="HlavneMenu" contentId="main" type="overlay" disabled={false}>
+        <IonMenu className="menu" side="start" menuId="HlavneMenu" contentId="main" type="overlay" disabled={false}>
             <IonHeader>
                 <IonToolbar color="primary">
-                    <IonTitle>Start Menu</IonTitle>
+                    <IonMenuToggle className="navburger" menu="HlavneMenu" autoHide={false}>
+                        <IonButton fill='clear'>
+                            <IonIcon icon={arrowBackOutline} className="navburgerIcon" size="large" />
+                        </IonButton>
+                    </IonMenuToggle>
                 </IonToolbar>
             </IonHeader>
             <IonContent id="main">
