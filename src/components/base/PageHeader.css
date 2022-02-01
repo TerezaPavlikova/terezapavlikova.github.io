@@ -2,18 +2,18 @@
     width: 90%; 
     margin:0 auto; 
    --background: transparent;
-   --color: #E9E9E9;
+   --color: var(--ion-color-secondary);
 }
 .sticky-toolbar{
-    --background: var(--ion-color-secondary);
-    --color:#E9E9E9;
+    --background: var(--ion-color-primary);
+    --color:var(--ion-color-secondary);
 }
 .navburgerIcon{
     font-size: xx-large; 
 }
 
 .navburgerIcon{
-    color: #E9E9E9;
+    color: var(--ion-color-secondary);
     margin-right: 5px;
  }
  

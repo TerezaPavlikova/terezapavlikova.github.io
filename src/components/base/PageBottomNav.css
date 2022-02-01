@@ -1,6 +1,6 @@
 
 .page-bottom-nav {
-    background-color: var(--ion-color-secondary);
+
     height: 56px; min-height: 56px;
     width: 100%; min-width: 100%;
     position: absolute;
@@ -19,8 +19,8 @@
     margin:0;
     width: 33.33%;
     height: 100%;
-    background-color: var(--ion-color-secondary);
-    color: var(--ion-color-primary);
+    background-color: var(--ion-color-primary);
+    color: var(--ion-color-secondary);
     display:flex;
     flex:1 1 33.33%; 
     text-decoration: none;
@@ -30,7 +30,7 @@
     }
 
 .page-bottom-btn.active {
-    background-color: var(--ion-color-secondary-shade);
+    background-color: var(--ion-color-primary-shade);
 }
 .page-bottom-btn-text {
     margin:auto;

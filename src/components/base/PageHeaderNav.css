@@ -8,5 +8,5 @@
     font-size: large;
  }
  .page-header-link-button {
-    color:#E9E9E9;
+    color:var(--ion-color-secondary);
 }
