@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 export const PageBottomNav: React.FC = () => {
   return (
 
-    <div slot='bottom' className='page-bottom-nav'>
+    <div className='page-bottom-nav'>
       <NavLink to='/' className='page-bottom-btn'>
         <IonButton className='page-bottom-link-button'>
           <IonIcon icon={homeOutline} className="navburgerIcon" size="large" />

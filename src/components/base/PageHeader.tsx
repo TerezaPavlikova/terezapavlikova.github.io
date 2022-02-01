@@ -1,8 +1,8 @@
 import React from 'react';
-import { IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonMenu, IonMenuToggle, IonTitle, IonToolbar } from '@ionic/react';
-import { homeOutline, imagesOutline, mailOutline, menu } from 'ionicons/icons';
+import { IonButton, IonButtons, IonHeader, IonIcon, IonItem, IonMenuToggle, IonToolbar } from '@ionic/react';
+import { menu } from 'ionicons/icons';
 import './PageHeader.css';
-import { NavLink } from 'react-router-dom';
+import {PageHeaderNav} from './PageHeaderNav'
 
 export const PageHeader: React.FC = () => {
   return (
@@ -16,25 +16,7 @@ export const PageHeader: React.FC = () => {
                 <IonIcon icon={menu} className="navburgerIcon" size="large" />
               </IonButton>
             </IonMenuToggle>
-            <NavLink to='/' className='page-header-btn'>
-              <IonButton className='page-header-link-button'>
-                <IonIcon icon={homeOutline} className="navburgerIcon" size="large" /> 
-                <span className='page-header-link-lbl'>Domov </span>
-              </IonButton>
-            </NavLink>
-            <NavLink to='/galeria' className='page-header-btn'>
-              <IonButton className='page-header-link-button'>
-                <IonIcon icon={imagesOutline} className="navburgerIcon" size="large" />
-                <span className='page-header-link-lbl'>Galeria </span>
-              </IonButton>
-            </NavLink>
-            <NavLink to='/kontakt' className='page-header-btn'>
-              <IonButton className='page-header-link-button' >
-                <IonIcon icon={mailOutline} className="navburgerIcon" size="large" />
-                <span className='page-header-link-lbl'>Kontakt </span>
-              </IonButton>
-              
-            </NavLink>
+            <PageHeaderNav/>
 
           </IonButtons>
         </IonItem>

@@ -1,0 +1,12 @@
+@media (max-width:768px) {
+    .page-header-btn{
+        display: none;
+    }
+    
+}
+.page-header-link-lbl{
+    font-size: large;
+ }
+ .page-header-link-button {
+    color:#E9E9E9;
+}
