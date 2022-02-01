@@ -8,24 +8,23 @@ export const PageBottomNav: React.FC = () => {
   return (
 
     <div className='page-bottom-nav'>
-      <NavLink to='/' className='page-bottom-btn'>
-        <IonButton className='page-bottom-link-button'>
-          <IonIcon icon={homeOutline} className="navburgerIcon" size="large" />
+      <NavLink to='/Domov' className='page-bottom-btn'>
+        <div className='page-bottom-btn-text'>
+          <IonIcon icon={homeOutline} size="large" />
           <span className='page-bottom-link-lbl'>Domov </span>
-        </IonButton>
+        </div>
       </NavLink>
       <NavLink to='/galeria' className='page-bottom-btn'>
-        <IonButton className='page-bottom-link-button'>
-          <IonIcon icon={imagesOutline} className="navburgerIcon" size="large" />
+        <div className='page-bottom-btn-text'>
+          <IonIcon icon={imagesOutline} size="large" />
           <span className='page-bottom-link-lbl'>Galeria </span>
-        </IonButton>
+        </div>
       </NavLink>
       <NavLink to='/kontakt' className='page-bottom-btn'>
-        <IonButton className='page-bottom-link-button' >
-          <IonIcon icon={mailOutline} className="navburgerIcon" size="large" />
+        <div className='page-bottom-btn-text'>
+          <IonIcon icon={mailOutline} size="large" />
           <span className='page-bottom-link-lbl'>Kontakt </span>
-        </IonButton>
-
+        </div>
       </NavLink>
     </div>
 

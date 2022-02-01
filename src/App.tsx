@@ -60,8 +60,8 @@ const App: React.FC = () => (
                 <Route path="/Kontakt" exact={true} component={Kontakt} />
                 <Route path="/NaStiahnutie" exact={true} component={NaStiahnutie} />
                 <Route path="/Galeria" exact={true} component={Galeria} />
-                <Route path="/" exact={true} component={Home} />
-                <Redirect from="*" to="/" />
+                <Route path="/Domov" exact={true} component={Home} />
+                <Redirect from="*" to="/Domov" />
               </Switch>
             </IonContent >
           </IonPage>
