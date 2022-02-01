@@ -13,7 +13,7 @@ let MojZoznam=['vektor', 'raster']
   return (
       <IonGrid>
         <IonRow>
-{MojZoznam.map(x=> { return <IonCol size="2">
+{MojZoznam.map(x=> { return <IonCol sizeXs='12' sizeSm='6' sizeMd='4' sizeLg='3' sizeXl='2'>
             <PicsNahlad title={x}/>
           </IonCol>})}
         </IonRow>
