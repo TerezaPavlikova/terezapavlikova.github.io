@@ -1,4 +1,4 @@
-import { GalleryModel } from "../../models/GalleryModel";
+import { GalleryModel, GalleryModelType } from "../../models/GalleryModel";
 import { GalleryActions } from "./structure/actions";
 import { GalleryGetters } from "./structure/getters";
 import { GalleryMutations } from "./structure/reducer";
@@ -24,7 +24,9 @@ export const initialStore: GalleryStore = {
         gallery: []
     } as GalleryState,
     getters: {
-        getAll: ()=> []
+        getAll: ()=> [],
+        getType: (type:GalleryModelType)=> []
+
     },
     mutations: {
         commit: () => { }
