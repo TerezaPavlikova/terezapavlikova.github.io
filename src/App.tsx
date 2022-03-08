@@ -45,8 +45,12 @@ const App: React.FC = () => (
           <PageHeader /> 
           <PageBottomNav/>
           <Menu />
-          <IonPage className="page-content">
+          <IonPage className="page-wrapper">
+            
+           
             <IonContent >
+              <div className='page-content' >
+                <div className='page-content-body'>
               <Switch >
                 <Route path="/Kontakt" exact={true} component={Kontakt} />
                 <Route path="/NaStiahnutie" exact={true} component={NaStiahnutie} />
@@ -54,7 +58,10 @@ const App: React.FC = () => (
                 <Route path="/Domov" exact={true} component={Home} />
                 <Redirect from="*" to="/Domov" />
               </Switch>
+              </div>
+              </div>
             </IonContent >
+            
           </IonPage>
           
         </IonReactRouter>
