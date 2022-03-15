@@ -2,7 +2,9 @@ import React from 'react';
 import { IonButton, IonButtons, IonHeader, IonIcon, IonItem, IonMenuToggle, IonToolbar } from '@ionic/react';
 import { menu } from 'ionicons/icons';
 import './PageHeader.css';
-import {PageHeaderNav} from './PageHeaderNav'
+import { PageHeaderNav } from './PageHeaderNav'
+import { NavLink } from 'react-router-dom';
+
 
 export const PageHeader: React.FC = () => {
   return (
@@ -16,9 +18,15 @@ export const PageHeader: React.FC = () => {
                 <IonIcon icon={menu} className="navburgerIcon" size="large" />
               </IonButton>
             </IonMenuToggle>
-            <PageHeaderNav/>
+            
+            <PageHeaderNav />
 
           </IonButtons>
+          <NavLink slot="end" to='/' className='ion-no-margin ion-no-padding'>
+
+              <img src="/assets/icon/logo4.png" className='page-header-logo' />
+
+            </NavLink>
         </IonItem>
 
       </IonToolbar>
