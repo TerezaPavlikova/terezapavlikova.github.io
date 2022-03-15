@@ -5,8 +5,10 @@ export interface GalleryModel {
 }
 
 export const enum GalleryModelType{
-    RASTER=0,
-    VEKTOR=1,
+     ALL=0,
+     VEKTOR=1,
+     RASTER=2,
+     
 }
 export const enum GalleryItemOrientation{
     PORTRAIT=0,

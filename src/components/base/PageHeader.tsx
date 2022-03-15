@@ -24,7 +24,7 @@ export const PageHeader: React.FC = () => {
           </IonButtons>
           <NavLink slot="end" to='/' className='ion-no-margin ion-no-padding'>
 
-              <img src="/assets/icon/logo4.png" className='page-header-logo' />
+              <img src="/assets/icon/logo5.png" className='page-header-logo' />
 
             </NavLink>
         </IonItem>

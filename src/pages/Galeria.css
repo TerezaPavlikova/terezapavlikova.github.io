@@ -70,3 +70,6 @@ object-fit: contain;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
+.selectBoxWrapper { /*tu sme skoncili*/
+    
+}

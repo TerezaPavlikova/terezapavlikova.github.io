@@ -1,14 +1,18 @@
-import { IonCol, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCardContent, IonImg, IonModal } from '@ionic/react';
+import { IonCol, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCardContent, IonImg, IonModal, IonSelect, IonSelectOption } from '@ionic/react';
 import './Galeria.css';
 import useGalleryStore from '../hooks/store/useGalleryStore';
-import { GalleryItemOrientation } from '../models/GalleryModel';
+import { GalleryItemOrientation, GalleryModelType } from '../models/GalleryModel';
 import { useRef, useState } from 'react';
 const Galeria: React.FC = () => {
 
 
-  const { getters: { getAll } } = useGalleryStore();
-
-  var galleryItems = getAll()
+  const { getters: { getAll,getType } } = useGalleryStore();
+const [selectedType, setSelectedType] = useState <GalleryModelType>(GalleryModelType.ALL);
+    
+  var galleryItems = selectedType
+    ? getType(selectedType)
+    : getAll()
+    
   const [modalPhotoId, setModalPhotoId] = useState<number>(-1);
   const modalElPhoto = useRef(document.createElement('ion-modal'));
   const resolveSize = (orientation: GalleryItemOrientation, portrait: number, landscape: number, panorama: number): string => {
@@ -43,6 +47,14 @@ const Galeria: React.FC = () => {
     <IonToolbar>
       <IonTitle>Default Title</IonTitle>
     </IonToolbar>
+<div className='selectBoxWrapper'>
+  <IonSelect value={selectedType} onIonChange={e=>setSelectedType(e.detail.value)}>
+    <IonSelectOption value={GalleryModelType.ALL} > všetko   </IonSelectOption>
+    <IonSelectOption value={GalleryModelType.VEKTOR} > vektor   </IonSelectOption>
+    <IonSelectOption value={GalleryModelType.RASTER} > raster   </IonSelectOption>
+  </IonSelect>
+</div>
+
     <IonGrid className='galeria-content'>
       <IonRow>
         {galleryItems.map((x, i) => {
