@@ -45,7 +45,7 @@ const [selectedType, setSelectedType] = useState <GalleryModelType>(GalleryModel
 
   return (<>
     <IonToolbar>
-      <IonTitle>Default Title</IonTitle>
+      <IonTitle>Galéria</IonTitle>
     </IonToolbar>
 <div className='selectBoxWrapper'>
   <IonSelect value={selectedType} onIonChange={e=>setSelectedType(e.detail.value)}>

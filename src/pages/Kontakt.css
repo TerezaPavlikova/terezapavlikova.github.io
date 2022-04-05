@@ -1,0 +1,42 @@
+.contactCard {
+    max-width: 500px !important;
+    margin: auto !important;
+}
+.contactTitle {
+    --background: #ffffff;
+}
+
+@media (min-width:800px) {
+    .contactGrid {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+.contactRow {
+    --ion-grid-column-padding: 20px;
+}
+
+.contactColumn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.contactColumnIcon{
+    flex: 0 0 4px;
+    padding:0px;
+    margin-right:10px;
+}
+@media (min-width:800px){
+    .contactColumnIcon{
+        padding-left: 20px;
+    }
+}
+
+@media (min-width:340px){
+    .contactLabel {
+        font-size: large;
+    }
+}
