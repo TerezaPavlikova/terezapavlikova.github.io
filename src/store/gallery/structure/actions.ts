@@ -32,9 +32,9 @@ export const initActions = (commit: React.Dispatch<GalleryMutations>) => {
                         { url: '/assets/galeria/vektor/cover.jpg', type: GalleryModelType.VEKTOR, orientation: GalleryItemOrientation.PORTRAIT },
                         { url: '/assets/galeria/vektor/zvery.png', type: GalleryModelType.VEKTOR, orientation: GalleryItemOrientation.PORTRAIT },
                         { url: '/assets/galeria/vektor/tavy.jpg', type: GalleryModelType.VEKTOR, orientation: GalleryItemOrientation.LANDSCAPE },
-                        { url: '/assets/galeria/vektor/jablko.jpg', type: GalleryModelType.VEKTOR, orientation: GalleryItemOrientation.LANDSCAPE },
+                     //{ url: '/assets/galeria/vektor/jablko.jpg', type: GalleryModelType.VEKTOR, orientation: GalleryItemOrientation.LANDSCAPE },
                         { url: '/assets/galeria/vektor/vtaky.jpg', type: GalleryModelType.VEKTOR, orientation: GalleryItemOrientation.PORTRAIT },
-                    ]
+                        ]
                 })
                 break;
             default: console.log('no action taken');
