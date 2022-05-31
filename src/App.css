@@ -1,4 +1,6 @@
-
+:root {
+--ion-footer-heigh:100px; 
+}
 
 .page-wrapper{
     margin-top: 60px;
@@ -8,7 +10,8 @@
 }
 .page-content{
     max-width: 1200px;
-        margin:auto
+    margin:auto;
+    min-height: calc(100% - var(--ion-footer-heigh));
 }
 
 .page-content-body{

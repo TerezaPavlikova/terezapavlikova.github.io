@@ -1,0 +1,12 @@
+.FooterContainer {
+    background: var(--ion-footer-background-color);
+    color:var(--ion-background-color);
+    width: 100%;
+    height: var(--ion-footer-heigh)
+
+}
+.FooterContent {
+    max-width: 1200px;
+    margin:auto;
+    padding: 10px;
+}

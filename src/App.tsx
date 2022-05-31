@@ -14,6 +14,7 @@ import { PageHeader } from './components/base/PageHeader'
 import { PageBottomNav } from './components/base/PageBottomNav'
 import { GalleryContextProvider } from './store/gallery/GalleryContext'
 import {GlobalInitializer } from './components/base/Initializers/GlobalInitializer' 
+import { Footer } from './components/base/Footer';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -57,9 +58,11 @@ const App: React.FC = () => (
                 <Route path="/Galeria" exact={true} component={Galeria} />
                 <Route path="/Domov" exact={true} component={Home} />
                 <Redirect from="*" to="/Domov" />
-              </Switch>
+              </Switch> 
+             
               </div>
               </div>
+              <Footer/>
             </IonContent >
             
           </IonPage>

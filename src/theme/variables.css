@@ -4,6 +4,7 @@ http://ionicframework.com/docs/theming/ */
 /** Ionic CSS Variables **/
 :root {
   --ion-background-color: #dadada;
+  --ion-footer-background-color: #3f3939;
   /** primary **/
   --ion-color-primary: #efbd34;
 	--ion-color-primary-rgb: 239,189,52;

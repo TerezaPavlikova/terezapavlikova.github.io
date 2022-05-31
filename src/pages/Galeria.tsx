@@ -1,4 +1,4 @@
-import { IonCol, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCardContent, IonImg, IonModal, IonSelect, IonSelectOption } from '@ionic/react';
+import { IonCol, IonHeader, IonPage, IonTitle, IonToolbar, IonGrid, IonRow, IonCard, IonCardContent, IonImg, IonModal, IonSelect, IonSelectOption, IonButton } from '@ionic/react';
 import './Galeria.css';
 import useGalleryStore from '../hooks/store/useGalleryStore';
 import { GalleryItemOrientation, GalleryModelType } from '../models/GalleryModel';
@@ -7,7 +7,7 @@ const Galeria: React.FC = () => {
 
 
   const { getters: { getAll,getType } } = useGalleryStore();
-const [selectedType, setSelectedType] = useState <GalleryModelType>(GalleryModelType.ALL);
+  const [selectedType, setSelectedType] = useState<GalleryModelType>(GalleryModelType.ALL);
     
   var galleryItems = selectedType
     ? getType(selectedType)
@@ -16,7 +16,6 @@ const [selectedType, setSelectedType] = useState <GalleryModelType>(GalleryModel
   const [modalPhotoId, setModalPhotoId] = useState<number>(-1);
   const modalElPhoto = useRef(document.createElement('ion-modal'));
   const resolveSize = (orientation: GalleryItemOrientation, portrait: number, landscape: number, panorama: number): string => {
-
     if (orientation === GalleryItemOrientation.LANDSCAPE) {
       return landscape.toString()
     }
@@ -27,8 +26,8 @@ const [selectedType, setSelectedType] = useState <GalleryModelType>(GalleryModel
       return portrait.toString()
     }
     return '0'
-
   }
+
   const previous = () => {
     console.log("previous");
     if (modalPhotoId > 0) {
@@ -42,18 +41,16 @@ const [selectedType, setSelectedType] = useState <GalleryModelType>(GalleryModel
     }
   }
 
-
   return (<>
     <IonToolbar>
       <IonTitle>Galéria</IonTitle>
     </IonToolbar>
-<div className='selectBoxWrapper'>
-  <IonSelect value={selectedType} onIonChange={e=>setSelectedType(e.detail.value)}>
-    <IonSelectOption value={GalleryModelType.ALL} > všetko   </IonSelectOption>
-    <IonSelectOption value={GalleryModelType.VEKTOR} > vektor   </IonSelectOption>
-    <IonSelectOption value={GalleryModelType.RASTER} > raster   </IonSelectOption>
-  </IonSelect>
-</div>
+ 
+    <div className='galleryButtons' >
+      <IonButton color={selectedType === GalleryModelType.ALL ? "primary":"light"} onClick={()=>setSelectedType(GalleryModelType.ALL)}>Všetko</IonButton>
+      <IonButton color={selectedType === GalleryModelType.RASTER ? "primary":"light"} onClick={()=>setSelectedType(GalleryModelType.RASTER)}>Raster</IonButton>
+      <IonButton color={selectedType === GalleryModelType.VEKTOR ? "primary":"light"} onClick={()=>setSelectedType(GalleryModelType.VEKTOR)}>Vektor</IonButton>
+    </div>
 
     <IonGrid className='galeria-content'>
       <IonRow>
